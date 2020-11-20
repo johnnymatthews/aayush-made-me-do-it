@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="generator" content="Hugo 0.69.2" />
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aayush made me do it.</title>
+    <style>
+        /* Font imports. */
+        @font-face {
+            font-family: Quattrocento;
+            src: url(/Quattrocento-Regular.ttf); /* https://fonts.google.com/featured/Superfamilies?category=Handwriting&sidebar.open=true&selection.family=Quattrocento */
+        }
+
+        body {
+            background: #E4C1F9;
+            color: #D3F8E2;
+            font-family: "Quattrocento", serif;
+            font-size: 2em;
+            margin: auto;
+        }
+
+        h1 {
+            letter-spacing: -0.05em;
+            font-weight: 100;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        @media screen and (max-width: 800px) {
+            body {
+                max-width: 90%;
+            }
+        }
+
+        /* Fancy custom classes. */
+        .homepage-title {
+            text-align: center;
+            margin-top: 45vh;
+        }
+
+    </style>
+</head>
+
+<body onload="random_colours()" id="the_body">
+    <h1 id="the_title" class="homepage-title"><a href="https://coolors.co/d3f8e2-e4c1f9-f694c1-ede7b1-a9def9">Aayush made me do it.</a></h1>
+</body>
+<script>
+    function random_colours() {
+        const colours = ["D3F8E2", "E4C1F9", "F694C1", "EDE7B1", "A9DEF9"];
+        var random_number = Math.floor(Math.random() * colours.length);
+        const background = colours[random_number];
+        colours.splice(random_number, 1);
+        var random_number = Math.floor(Math.random() * colours.length);
+        const foreground = colours[random_number];
+        document.getElementById("the_body").style.backgroundColor=`#${background}`;
+        document.getElementById("the_title").style.color=`#${foreground}`;
+    }
+
+    window.setInterval(function(){ random_colours(); }, 1000);
+</script>
+</html>
